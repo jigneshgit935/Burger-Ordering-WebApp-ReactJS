@@ -239,31 +239,6 @@
   height: 700px;
 }
 
-@media (max-width: 1200px) {
-  /* Home promotion */
-  .promotion_section h2 {
-    font-size: 2.25rem;
-  }
-}
-
-@media (max-width: 992px) {
-  /* about 2.0 */
-  .about_section h2 {
-    font-size: 2.5rem;
-  }
-  .about_section p {
-    padding: 20px 0;
-  }
-  .about_box p {
-    padding: 0;
-  }
-
-  .bg_parallax_scroll {
-    background-attachment: scroll;
-    height: 500px;
-  }
-}
-
 /* Home Shop */
 
 .shop_section {
@@ -325,6 +300,7 @@
   background: url(../assets/blog/reviews.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .blog_section .user_img img {
@@ -352,7 +328,65 @@
   font-size: 1rem;
   margin-bottom: 2rem;
 }
+
+/* Contact */
+.contact_section {
+  background: url(../assets/footer/banner-1.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.contact_section h4 {
+  font-size: 2.375rem;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.contact_section h2 {
+  font-size: 4.5rem;
+  margin-bottom: 25px;
+}
+.contact_section p {
+  width: 70%;
+  margin: 0 auto 30px;
+}
+.contact_section a {
+  font-size: 22px;
+  font-weight: 700;
+}
 /* media query mobiles */
+
+@media (max-width: 1200px) {
+  /* Home promotion */
+  .promotion_section h2 {
+    font-size: 2.25rem;
+  }
+  .contact_section h2 {
+    font-size: 3.5rem;
+  }
+  .contact_section p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  /* about 2.0 */
+  .about_section h2 {
+    font-size: 2.5rem;
+  }
+  .about_section p {
+    padding: 20px 0;
+  }
+  .about_box p {
+    padding: 0;
+  }
+
+  .bg_parallax_scroll {
+    background-attachment: scroll;
+    height: 500px;
+  }
+}
+
 @media (max-width: 767px) {
   /* Home Hero1.0 */
   .hero_section .hero_text h1 {
