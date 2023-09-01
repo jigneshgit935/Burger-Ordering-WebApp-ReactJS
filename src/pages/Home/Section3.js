@@ -78,6 +78,23 @@ const mockData = [
   },
 ];
 
+const renderRatingIcon = (rating) => {
+  const stars = [];
+
+  for (let i = 0; i < 5; i++) {
+    if (rating > 0.5) {
+      stars.push(<i key={i} className="bi bi-star-fill"></i>);
+      rating--;
+    } else if (rating > 0 && rating < 1) {
+      stars.push(<i key={'half'} className="bi bi-star-half"></i>);
+      rating--;
+    } else {
+      stars.push(<i key={`empty${i}`} className="bi bi-star"></i>);
+    }
+  }
+  return stars;
+};
+
 const Section3 = () => {
   return (
     <section className="menu_section">
@@ -100,7 +117,7 @@ const Section3 = () => {
               title={cardData.title}
               paragraph={cardData.paragraph}
               price={cardData.price}
-              //   renderRatingIcon={renderRatingIcon}
+              renderRatingIcon={renderRatingIcon}
             />
           ))}
         </Row>
